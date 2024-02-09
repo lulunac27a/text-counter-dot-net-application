@@ -8,17 +8,19 @@
 
 <textarea id="textContent" name="textContent" rows="10" cols="80" @bind="textContent"></textarea><br />
 <button @onclick="updateTextCounter">Update Text Counter Output</button><br />
-Characters: @characters<br>Words: @words<br>Lines: @lines
+<div>@textOutput</div>
 @code {
-    private string textContent;
-    private int characters;
-    private int words;
-    private int lines;
+    private string textContent = "";
+    private int characters = 0;
+    private int words = 0;
+    private int lines = 0;
+    private string textOutput = "";
     private void updateTextCounter()
     {
+        textOutput = "";
         string Value = textContent;
-        int characters = Value.Length;
-        int words = Value.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length;
-        int lines = Value.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length;
+        textOutput += $"Characters: {Value.Length}\n";
+        textOutput += $"Words: {Value.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length}\n";
+        textOutput += $"Lines: {Value.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length}\n";
     }
 }
