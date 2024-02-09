@@ -6,7 +6,7 @@
 
 <h1>Text Counter</h1>
 
-<textarea id="textContent" name="textContent" rows="10" cols="80" @bind="textContent"></textarea>
+<textarea id="textContent" name="textContent" rows="10" cols="80" @bind="textContent"></textarea><br />
 <button @onclick="updateTextCounter">Update Text Counter Output</button><br />
 Characters: @characters<br>Words: @words<br>Lines: @lines
 @code {
@@ -18,7 +18,7 @@ Characters: @characters<br>Words: @words<br>Lines: @lines
     {
         string Value = textContent;
         int characters = Value.Length;
-        int words = Value.Split(' ').Length;
-        int lines = Value.Split('\n').Length;
+        int words = Value.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length;
+        int lines = Value.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length;
     }
 }
