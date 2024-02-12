@@ -1,0 +1,8 @@
+@page
+@model TextCounterModel
+<form method="post">
+    <textarea id="textContent" name="textContent" rows="10" cols="80" asp-for="textContent"></textarea><br />
+    <button>Update Text Counter Output</button><br />
+</form>
+<div id="textOutput">Characters: @Model.characters<br />Words: @Model.words<br />Lines: @Model.lines
+</div>
