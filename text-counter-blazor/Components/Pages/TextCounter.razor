@@ -10,14 +10,14 @@
 <button @onclick="updateTextCounter">Update Text Counter Output</button><br />
 <div id="textOutput">@textOutput</div>
 @code {
-    private string textContent = "";
+    private string textContent = "";//text content string input from text box
     private string textOutput = "";
-    private void updateTextCounter()
+    private void updateTextCounter()//update text counter output based on entered text
     {
         textOutput = "";
         string Value = textContent;
-        textOutput += $"Characters: {Value.Length}\n";
-        textOutput += $"Words: {Value.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length}\n";
-        textOutput += $"Lines: {Value.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length}\n";
+        textOutput += $"Characters: {Value.Length}\n";//number of characters
+        textOutput += $"Words: {Value.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length}\n";//number of words
+        textOutput += $"Lines: {Value.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length}\n";//number of lines
     }
 }
