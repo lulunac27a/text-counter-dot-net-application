@@ -1,5 +1,9 @@
 @page
 @model TextCounterModel
+@{
+    ViewData["Title"] = "Text Counter in Razor Pages";
+}
+<h1>Text Counter in Razor Pages</h1>
 <form method="post">
     <textarea id="textContent" name="textContent" rows="10" cols="80" asp-for="textContent"></textarea><br />
     <button>Update Text Counter Output</button><br />
