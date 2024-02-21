@@ -2,8 +2,5 @@
 **/.vscode
 **/bin
 **/obj
-**/Properties
 **/.DS_Store
-**/wwwroot/lib
-**/wwwroot/bootstrap
 text-counter-asp-net.sln
