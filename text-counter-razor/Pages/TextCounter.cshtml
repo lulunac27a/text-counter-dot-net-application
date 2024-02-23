@@ -8,5 +8,6 @@
     <textarea id="textContent" name="textContent" rows="10" cols="80" asp-for="textContent"></textarea><br />
     <button>Update Text Counter Output</button><br />
 </form>
-<div id="textOutput">Characters: @Model.characters<br />Words: @Model.words<br />Lines: @Model.lines
+<div id="textOutput">Characters: @Model.characters.ToString("N0")<br />Words: @Model.words.ToString("N0")<br />Lines:
+    @Model.lines.ToString("N0")
 </div>

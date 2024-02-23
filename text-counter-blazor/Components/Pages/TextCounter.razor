@@ -16,8 +16,8 @@
     {
         textOutput = "";
         string Value = textContent;
-        textOutput += $"Characters: {Value.Length}\n";//number of characters
-        textOutput += $"Words: {Value.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length}\n";//number of words
-        textOutput += $"Lines: {Value.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length}\n";//number of lines
+        textOutput += $"Characters: {Value.Length.ToString("N0")}\n";//number of characters
+        textOutput += $"Words: {Value.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length.ToString("N0")}\n";//number of words
+        textOutput += $"Lines: {Value.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length.ToString("N0")}\n";//number of lines
     }
 }

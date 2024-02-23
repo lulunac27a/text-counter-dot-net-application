@@ -9,6 +9,6 @@ while (true)
     }
     textContent += textInput + '\n';//add text content from entered text input for each line
 }
-Console.WriteLine($"Characters: {textContent.Length}");//number of characters
-Console.WriteLine($"Words: {textContent.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length}");//number of words
-Console.WriteLine($"Lines: {textContent.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length}");//number of lines
+Console.WriteLine($"Characters: {textContent.Length.ToString("N0")}");//number of characters
+Console.WriteLine($"Words: {textContent.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length.ToString("N0")}");//number of words
+Console.WriteLine($"Lines: {textContent.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length.ToString("N0")}");//number of lines

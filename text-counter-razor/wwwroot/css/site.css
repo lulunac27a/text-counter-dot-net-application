@@ -26,5 +26,5 @@ body {
 }
 
 #textOutput {
-  white-space: pre-wrap;
+  white-space: no-wrap;
 }
