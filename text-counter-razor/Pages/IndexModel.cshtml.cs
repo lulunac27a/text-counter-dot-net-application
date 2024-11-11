@@ -12,6 +12,9 @@ namespace TextCounterRazor.Pages
             this._logger = logger;
         }
 
-        public void OnGet() { }
+        public void OnGet()
+        {
+            //empty method
+        }
     }
 }
