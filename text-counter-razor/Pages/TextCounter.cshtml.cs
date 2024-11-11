@@ -4,19 +4,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 public class TextCounterModel : PageModel
 {
     [BindProperty]
-    public string? textContent { get; set; } //text content string input from text box
-    public int characters { get; set; } //number of characters
-    public int words { get; set; } //number of words
-    public int lines { get; set; } //number of lines
+    public string? TextContent { get; set; } //text content string input from text box
+    public int Characters { get; set; } //number of characters
+    public int Words { get; set; } //number of words
+    public int Lines { get; set; } //number of lines
 
     public void OnPost()
     {
-        textContent = Request.Form["textContent"]; //get text box input
-        characters = textContent?.Length ?? 0; //update number of characters, words and lines based on entered text
-        words =
-            textContent
+        TextContent = Request.Form["textContent"]; //get text box input
+        Characters = TextContent?.Length ?? 0; //update number of characters, words and lines based on entered text
+        Words =
+            TextContent
                 ?.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
                 .Length ?? 0;
-        lines = textContent?.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length ?? 0;
+        Lines = TextContent?.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length ?? 0;
     }
 }
