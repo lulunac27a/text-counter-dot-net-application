@@ -1,4 +1,4 @@
-namespace text_counter_razor.Pages
+namespace TextCounterRazor.Pages
 {
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
