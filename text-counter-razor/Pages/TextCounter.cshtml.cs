@@ -11,12 +11,14 @@ public class TextCounterModel : PageModel
 
     public void OnPost()
     {
-        TextContent = Request.Form["textContent"]; //get text box input
-        Characters = TextContent?.Length ?? 0; //update number of characters, words and lines based on entered text
-        Words =
-            TextContent
-                ?.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
-                .Length ?? 0;
-        Lines = TextContent?.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length ?? 0;
+        this.TextContent = this.Request.Form["textContent"]; //get text box input
+        this.Characters = this.TextContent?.Length ?? 0; //update number of characters, words and lines based on entered text
+        this.Words =
+            this.TextContent?.Split(
+                new char[] { ' ', '\r', '\n' },
+                StringSplitOptions.RemoveEmptyEntries
+            ).Length ?? 0;
+        this.Lines =
+            this.TextContent?.Split('\n', StringSplitOptions.RemoveEmptyEntries).Length ?? 0;
     }
 }
