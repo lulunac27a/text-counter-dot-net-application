@@ -5,7 +5,7 @@ string textContent = "";
 while (true)
 {
     string textInput = Console.ReadLine(); //read text input in each line
-    if (textInput == null | textInput == "") //if Ctrl+D is pressed or text input is empty
+    if (textInput == null || textInput == "") //if Ctrl+D is pressed or text input is empty
     {
         break; //end while loop
     }
